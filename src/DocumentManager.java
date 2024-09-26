@@ -30,7 +30,7 @@ public class DocumentManager {
         }
 
         Optional<Document> getDocument = this.allDocuments.stream()
-                .filter(newDocument -> newDocument.getAuthor().canEqual(document.getAuthor()) &&
+                .filter(newDocument -> newDocument.getAuthor().equals(document.getAuthor()) &&
                         newDocument.getContent().equals(document.getContent()))
                 .findFirst();
 
